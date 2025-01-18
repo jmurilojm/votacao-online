@@ -6,12 +6,12 @@ const apuracao = document.querySelector('#apuracao')
 const main = document.querySelector('main')
 
 
-/*if(localStorage.getItem('statusDoVoto')){
+if(localStorage.getItem('statusDoVoto')){
   alert('Você já Votou!')
   main.style.display = 'none'
   apuracao.style.marginTop = '100px'
   apuracao.style.display = 'block'
-}*/
+}
 
 for (let i = 0; i < nomes.length; i++) {
   // encaminhar o item
@@ -60,5 +60,5 @@ function enviarEmail(votos) {
   // Abrir o link no navegador
   window.location.href = mailtoLink;
 
-  //localStorage.setItem('statusDoVoto','enviado')
+  localStorage.setItem('statusDoVoto','enviado')
 }
