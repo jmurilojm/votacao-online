@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+li {
+  border: 1px solid black;
+  width: 100px;
+  margin: 5px 0;
+  border-radius: 10px;
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 5px 50px;
+}
+
+h1 {
+  background: darkblue;
+  width: 100%;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+img {
+  width: 80px;
+  margin: 10px auto;
+  display: block;
+}
+
+main {
+  padding: 10px;
+}
+
+button {
+  padding: 5px 20px;
+  margin: auto;
+  display: block;
+  cursor: pointer;
+  box-shadow: 0 0 3px gray;
+}
+
+h2,
+h3 {
+  background-image: linear-gradient(to right, white, darkblue);
+  font-size: 18px;
+}
+
+h4 {
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+p {
+  font-size: 12px;
+}
+
+
+.candidatos {
+  /*min-height: 120px;*/
+}
+
+.candidatos li {
+  display: inline-block;
+  width: 100%;
+}
+
+.escolha {
+  min-height: 50px;
+}
+
+.escolha li {
+  width: 100%;
+}
+
+.centralizar {
+  text-align: center;
+  color: red;
+}

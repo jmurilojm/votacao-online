@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Apuração</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      background: darkblue;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    h4 {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    h6 {
+      margin: 5px 10px;
+    }
+
+    main {
+      width: 90%;
+      padding: 20px 10px;
+      margin: auto;
+    }
+
+    div {
+      height: 30px;
+      background: darkblue;
+      width: 1%;
+      margin: 5px 0;
+      color: white;
+      text-align: center;
+      margin: 0 0 20px 0;
+    }
+
+    main div span {
+      color: blue;
+      background: white;
+      font-size: 10px;
+      position: fixed;
+      left: 20px;
+    }
+
+    img {
+      width: 30px;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><img src="logo.png" alt="Logo não oficial da GCM Arcoverde PE">Apuração</h1>
+  <h6>Última atualização: 00:00</h6>
+  <h4>Total de Votos Apurados: <span id="apuracao">0</span></h4>
+  <main>
+    <!--<div><span>0.0</span></div>-->
+  </main>
+
+  <script>
+    const votos = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    const nomes = ['Alessandro Lessa Rodrigues', 'André Soares', 'Eder da Rocha', 'Ednaldo de Lima', 'Érico Monteiro', 'Francimario', 'Henrique Dantas', 'Jhonny Weslly', 'José Ladjane Mendes e Silva', 'Karl Francis', 'Micael Thiago Santos Feitosa']
+    let soma = 0;
+
+    for (let i = 0; i < votos.length; i++) {
+      soma += votos[i];
+    }
+
+    const main = document.querySelector('main');
+    for (let i = 0; i < votos.length; i++) {
+      const percentual = (votos[i] / soma) * 100;
+      console.log(percentual);
+
+      const div = document.createElement('div');
+      const span = document.createElement('span');
+
+      span.textContent = `${percentual.toFixed(1)}% ${nomes[i]}`; // Formatado o percentual com 1 casa decimal
+      div.style.width = percentual + "%"; // Definindo a largura proporcional ao percentual
+
+      div.appendChild(span)
+      main.appendChild(div);
+      document.querySelector('#apuracao').textContent = soma;
+    }
+  </script>
+</body>
+
+</html>
