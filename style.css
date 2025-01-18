@@ -38,6 +38,7 @@ img {
 
 main {
   padding: 10px;
+  display: none;
 }
 
 button {
