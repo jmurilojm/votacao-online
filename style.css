@@ -81,6 +81,7 @@ p {
 
 .escolha {
   min-height: 50px;
+  background: lightyellow;
 }
 
 .escolha li {
